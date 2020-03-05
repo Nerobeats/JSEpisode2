@@ -18,9 +18,22 @@
 *       pairs() returns []
 ****************************************************************/
 function pairs(names) {
-  // Your code goes here
+  const pairsList = [];
+  if(!names){return pairsList}
+  while (names.length !==0){
+    const arr = [];
+    let x = names.getRandom()
+    arr.push(x);
+    if (0 === names.length){
+      pairsList.push(arr);
+      break;
+    }
+    let y = names.getRandom()
+    arr.push(y);
+    pairsList.push(arr);
+  }
+  return pairsList;
 }
-
 module.exports = pairs;
 
 /**********************************************
